@@ -1,0 +1,51 @@
+<img src="../main/img/logo.png">
+<h1>WHERE'S MY CAR</h1>
+<section class="insert">
+    <h3>Register Data</h3>
+    <form action="/insert" method="post">
+        <div class="input">
+            <label for="plate">Plate No.</label>
+            <input type="text" id="plate" name="plate">
+        </div>
+        <div class="input">
+            <label for="car">Type & color of car</label>
+            <input type="text" id="car" name="car">
+        </div>
+        <div class="input">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+</section>
+<section class="get">
+    <h3>Search car's plate No:</h3>
+    {{!-- <a href="/get-data">LOAD DATA</a> --}}
+    <form action="/get-data" method="post">
+        <div class="input">
+            <label for="search">Plate No:</label>
+            <input type="text" id="search" name="search">
+        </div>
+        <button type="submit">Search</button>
+    </form>
+    <div>
+        {{#each items }}
+        <article class="item">
+            <div>Plate NO.: {{this.plate}}</div>
+            <div>Type of car: {{this.car}}</div>
+            <div>Location: {{this.location}}</div>
+            <div>ID: {{this.hash}}</div>
+        </article>
+        {{/each}}
+    </div>
+</section>
+<section class="delete">
+    <h3>Check Out</h3>
+    <form action="/delete" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <button class="btn btn-danger" type="submit">Check Out</button>
+    </form>
+</section>
