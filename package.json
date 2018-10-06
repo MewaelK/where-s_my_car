@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://github.com/MewaelK/where-s_my_car",
   "scripts": {
+    "deploy": "gh-pages -d main",
     "dev": "nodemon server.js"
   },
   "author": "mk",
@@ -13,6 +15,7 @@
     "crypto-js": "^3.1.9-1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "gh-pages": "^2.0.1",
     "mongodb": "^3.1.6",
     "mongoose": "^5.3.1",
     "query-string": "^6.2.0"
